@@ -20,7 +20,7 @@ if __name__ == '__main__':
     parser.add_argument("-video", help='video path', default='images/dance2.mp4', type=str)
     parser.add_argument("-scale", help='image to scale',default=0.3, type=float)
     parser.add_argument("-show", nargs='+', help="types to show: -1 shows the skeletons, or idx for specific part",default = (-1, 2), type=int)   
-    parser.add_argument("-thre", help="threshold for heatmap part",default=0.1, type=str)
+    parser.add_argument("-thre", help="threshold for heatmap part",default=0.2, type=str)
     args = parser.parse_args()
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
